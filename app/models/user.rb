@@ -4,5 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
-  has_many :prompts
+  has_many :prompts, dependent: :destroy
+
+  validates :email, presence: true, uniqueness: true
 end
