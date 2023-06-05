@@ -1,0 +1,7 @@
+<%= simple_form_for(prompt, html: { multipart: true }) do |f| %>
+  <%= f.input :programming_language, collection: Prompt::LANGUAGES, input_html: { class: 'rounded' } %>
+  <%= f.input :job_title, input_html: { class: 'rounded' } %>
+  <%= f.input :key_values, maxlength: 70, input_html: { class: 'rounded' } %>
+  <%= f.input :job_field, input_html: { class: 'rounded' } %>
+  <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+<% end %>
