@@ -3,6 +3,10 @@
   display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: #ffffff;
 }
 
+.logo-container {
+  margin-left: 80px;
+}
+
 /* Navbar brand */
 .navbar-brand {
    display: flex; align-items: center; text-decoration: none;
@@ -10,12 +14,12 @@
 
 /* Logo image */
 .logo {
-  width: 40px; height: auto; margin-left: 80px;
+  width: 40px; height: auto;
 }
 
 /* Navigation links */
 .nav-links {
-  list-style: none; display: flex; align-items: center; margin: 0; padding: 0;
+  list-style: none; display: flex; align-items: center; margin: 0; padding: 0; margin-right: 20px;
 }
 
 .nav-links li {
