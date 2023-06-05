@@ -10,5 +10,6 @@ class CodeReviewsController < ApplicationController
 
   def show
   end
-  
+
+  # response = OpenaiService.new('whatever you want to ask it').call
 end
