@@ -2,3 +2,10 @@
 <h1>Challenge 1</h1>
 <pre><%=@prompt.received_challenge %>
 </pre>
+
+
+<%= simple_form_for(@code_review, html: { multipart: true }) do |f| %>
+  <%= form.input :answer, as: :text, input_html: { placeholder: "Insira sua resposta aqui" } %>
+  <%= form.input :answer_file, as: :file %>
+  <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+<% end %>
