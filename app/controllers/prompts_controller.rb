@@ -2,6 +2,7 @@ class PromptsController < ApplicationController
   before_action :set_prompt, only: [:show]
 
   def index
+    @prompts = Prompt.all
   end
 
   def new
