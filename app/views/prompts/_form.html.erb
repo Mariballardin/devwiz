@@ -1,5 +1,6 @@
 <%= simple_form_for(prompt, html: { multipart: true }) do |f| %>
   <%= f.input :programming_language, collection: Prompt::LANGUAGES, input_html: { class: 'rounded' } %>
+  <%= f.input :level, as: :integer, input_html: { min: '0', max: '5', step: '1' } %>
   <%= f.input :job_title, input_html: { class: 'rounded' } %>
   <%= f.input :key_values, maxlength: 70, input_html: { class: 'rounded' } %>
   <%= f.input :job_field, input_html: { class: 'rounded' } %>

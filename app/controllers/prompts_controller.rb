@@ -12,6 +12,10 @@ class PromptsController < ApplicationController
   end
 
   def create
+    @prompt = Prompt.new(prompt_params)
+    challenge_response = ChallengePromptService.new(@prompt).call
+    @prompt.received_challenge = challenge_response
+
   end
 
   private
@@ -21,6 +25,6 @@ class PromptsController < ApplicationController
   end
 
   def prompt_params
-    params.require(:prompt).permit(:programming_language, :job_title, :job_field, :key_values)
+    params.require(:prompt).permit(:programming_language, :level, :job_title, :job_field, :key_values)
   end
 end
