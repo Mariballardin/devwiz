@@ -5,4 +5,6 @@ class Prompt < ApplicationRecord
   validates :programming_language, presence: true
   validates :level, presence: true
   validates :job_title, presence: true
+  validates :key_values, presence: true
+  validates :job_field, presence: true
 end

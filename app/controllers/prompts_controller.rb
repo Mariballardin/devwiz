@@ -1,5 +1,5 @@
 class PromptsController < ApplicationController
-  before_action :set_prompt, only: [:show, :create]
+  before_action :set_prompt, only: [:show]
 
   def index
   end
@@ -13,9 +13,15 @@ class PromptsController < ApplicationController
 
   def create
     @prompt = Prompt.new(prompt_params)
+    @user = current_user
+    @prompt.user = @user
     challenge_response = ChallengePromptService.new(@prompt).call
     @prompt.received_challenge = challenge_response
-
+    if @prompt.save
+      redirect_to prompt_path(@prompt)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
