@@ -5,8 +5,10 @@
   </div>
   <% if user_signed_in? %>
     <ul class="nav-links">
+      <li><%= link_to "My challenges", prompts_path, class: "nav-link" %></li>
       <li><%= link_to "Home", root_path %></li>
       <li class="nav-item dropdown">
+
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
       <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item no-animation", data: {turbo_method: :delete} %>
