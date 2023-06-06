@@ -15,7 +15,7 @@ class PromptsController < ApplicationController
     @prompt = Prompt.new(prompt_params)
     challenge_response = ChallengePromptService.new(@prompt).call
     @prompt.received_challenge = challenge_response
-
+    @prompt.save
   end
 
   private
