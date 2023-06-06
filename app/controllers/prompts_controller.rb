@@ -16,6 +16,7 @@ class PromptsController < ApplicationController
     @user = current_user
     @prompt.user = @user
     challenge_response = ChallengePromptService.new(@prompt).call
+
     @prompt.received_challenge = challenge_response
     if @prompt.save
       redirect_to prompt_path(@prompt)
