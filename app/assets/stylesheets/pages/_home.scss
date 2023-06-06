@@ -1,8 +1,16 @@
 // Specific CSS for your home-page
+body  {
+  background-color: $body-bg;
+}
+
 .wraper {
   margin-right: auto;
   margin-left: auto;
   padding-top: 40px;
   padding-right: 80px;
   padding-left: 80px;
+}
+
+.btn-primary {
+  color: white;
 }

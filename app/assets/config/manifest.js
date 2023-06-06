@@ -2,3 +2,4 @@
 //= link_directory ../stylesheets .css
 //= link_tree ../builds
 //= link prompts/new.css
+//= link prompts/show.css
