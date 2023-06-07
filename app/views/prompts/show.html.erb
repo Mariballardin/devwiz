@@ -1,5 +1,5 @@
 <%= stylesheet_link_tag 'prompts/show' %>
-<h1>Challenge 1</h1>
+<h1> <%= @prompt.programming_language%> Challenge</h1>
 <pre><%=@prompt.received_challenge %>
 </pre>
 
@@ -8,3 +8,5 @@
   <%= f.input :user_answer, as: :text, input_html: { placeholder: "Insira sua resposta aqui" } %>
   <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
 <% end %>
+
+# if the user already has reviews, we can make a link and connect to prompt_code_reviews_path

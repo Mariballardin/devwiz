@@ -1,2 +1,7 @@
 <h1>all my challenges</h1>
+
+<% @prompts.each do |prompt| %>
+<%= link_to prompt.programming_language, prompt_path(prompt) %>
+<% end %>
+
 <%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
