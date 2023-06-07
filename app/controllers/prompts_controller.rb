@@ -10,6 +10,10 @@ class PromptsController < ApplicationController
   end
 
   def show
+    # Simulate a delay of 3 seconds (adjust as needed)
+    sleep(3)
+
+    @prompt = Prompt.find(params[:id])
   end
 
   def create
