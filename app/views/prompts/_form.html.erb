@@ -1,8 +1,11 @@
-<%= simple_form_for(prompt, html: { multipart: true, data: {action: "submit->loader#display"} }) do |f| %>
-  <%= f.input :programming_language, prompt: "Choose a language", collection: Prompt::LANGUAGES, input_html: { class: 'rounded' } %>
-  <%= f.input :level, :placeholder => "3", as: :integer, input_html: { min: '0', max: '5', step: '1' } %>
-  <%= f.input :job_title, :placeholder => "Senior Frontend Developer",input_html: { class: 'rounded' } %>
-  <%= f.input :key_values, :placeholder => "Fast learner, good knowledge in JavaScript", maxlength: 70, input_html: { class: 'rounded' } %>
-  <%= f.input :job_field, :placeholder =>  "Arts and Entertainment", input_html: { class: 'rounded' } %>
-  <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
-<% end %>
+
+ <div class="form">
+  <%= simple_form_for(prompt, html: { multipart: true, data: {action: "submit->loader#display"} }) do |f| %>
+    <%= f.input :programming_language, prompt: "Choose a language", collection: Prompt::LANGUAGES, input_html: { class: 'rounded' } %>
+    <%= f.input :level, :placeholder => "3", as: :integer, input_html: { min: '0', max: '5', step: '1' } %>
+    <%= f.input :job_title, :placeholder => "Senior Frontend Developer",input_html: { class: 'rounded' } %>
+    <%= f.input :key_values, :placeholder => "Fast learner, good knowledge in JavaScript", maxlength: 70, input_html: { class: 'rounded' } %>
+    <%= f.input :job_field, :placeholder =>  "Arts and Entertainment", input_html: { class: 'rounded' } %>
+    <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+  <% end %>
+</div>
