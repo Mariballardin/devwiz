@@ -1,3 +1,14 @@
 <%= stylesheet_link_tag 'prompts/new' %>
 
-<%= render 'form', prompt: @prompt %>
+<div data-controller="loader">
+  <div id="slow_warning" class="d-none" data-loader-target="loading">
+    <div class="loader" id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+  </div>
+
+  <div >
+    <%= render 'form', prompt: @prompt %>
+  </div>
+</div>

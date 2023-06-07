@@ -6,27 +6,11 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <script>
-    // JavaScript code to show and hide the loader
-    document.addEventListener("DOMContentLoaded", function() {
-      document.getElementById("loader").style.display = "none";
-    });
-
-    document.addEventListener("turbolinks:request-start", function() {
-      document.getElementById("loader").style.display = "flex";
-    });
-
-    document.addEventListener("turbolinks:load", function() {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
   <body>
-    <!--<%= render 'shared/loader' %> -->
     <%= render "shared/navbar" %>
     <div class="wraper">
       <%= render "shared/flashes" %>
