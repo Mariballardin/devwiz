@@ -3,3 +3,4 @@
 //= link_tree ../builds
 //= link prompts/new.css
 //= link prompts/show.css
+//= link code_reviews/show.css
