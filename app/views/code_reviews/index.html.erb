@@ -5,7 +5,7 @@
 <div class="review">
 <% @prompt.code_reviews.each do |code_review| %>
   <div id="feedback">
-    <%= code_review.received_feedback %>
+    <pre><%=code_review.received_feedback %></pre>
   </div>
 <% end %>
 </div>
