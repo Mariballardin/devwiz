@@ -2,7 +2,7 @@ class PromptsController < ApplicationController
   before_action :set_prompt, only: [:show]
 
   def index
-    @prompts = Prompt.all
+    @prompts = Prompt.where(user: current_user)
   end
 
   def new
@@ -10,6 +10,7 @@ class PromptsController < ApplicationController
   end
 
   def show
+    @code_review = CodeReview.new
   end
 
   def create
