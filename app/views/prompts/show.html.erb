@@ -4,8 +4,7 @@
 </pre>
 
 
-<%= simple_form_for(@code_review, html: { multipart: true }) do |f| %>
-  <%= form.input :answer, as: :text, input_html: { placeholder: "Insira sua resposta aqui" } %>
-  <%= form.input :answer_file, as: :file %>
+<%= simple_form_for([@prompt, @code_review], html: { multipart: true }) do |f| %>
+  <%= f.input :user_answer, as: :text, input_html: { placeholder: "Insira sua resposta aqui" } %>
   <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
 <% end %>

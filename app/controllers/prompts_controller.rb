@@ -10,6 +10,7 @@ class PromptsController < ApplicationController
   end
 
   def show
+    @code_review = CodeReview.new
   end
 
   def create
