@@ -20,14 +20,32 @@
   <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
 <% end %>
 
+<body translate="no" >
+<section>
+<div class="container">
+<div class="code-container">
+</div>
 
 
-<!-- Adicione este código JavaScript no final do arquivo show.html.erb -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const userInput = document.getElementById('code_review_user_answer').value;
-    const userAnswerPreview = document.getElementById('user-answer-preview');
-    userAnswerPreview.textContent = userInput;
-    hljs.highlightBlock(userAnswerPreview);
-  });
+</div>
+</section>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
+<script id="rendered-js" >
+var html_value;
+var editor = CodeMirror.fromTextArea(document.getElementById("code_review_user_answer"), {
+    styleActiveLine: true,
+    lineNumbers: true,
+    matchBrackets: true,
+    autoCloseBrackets: true,
+    autoCloseTags: true,
+    mode: "javascript",
+    //  intepolar a linguagem aqui e add mais la em cima
+});
 </script>
+</body>
+
+</html>
