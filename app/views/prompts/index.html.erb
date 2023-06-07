@@ -1,6 +1,6 @@
 <h1>all my challenges</h1>
 
-<div>
+<div class="container">
 <div class="title">
   <% @prompts.each do |prompt| %>
   <%= prompt.programming_language %>
@@ -15,7 +15,7 @@
 
 <div class="review">
   <% @prompts.each do |prompt| %>
-  <%= link_to 'See my reviews', code_review_path(prompt) %>
+  <%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %>
   <% end %>
 </div>
 

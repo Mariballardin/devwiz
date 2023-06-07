@@ -9,7 +9,7 @@ class ChallengePromptService
   end
 
   def build_challenge_prompt
-    "Consider a coding challenge for a programmer who wants to prepare for an interview for the job position of #{@challenge_prompt.job_title}
+    "Consider a coding challenge with a single response for a programmer who wants to prepare for an interview for the job position of #{@challenge_prompt.job_title}
     with #{@challenge_prompt.programming_language} as the programming language. The challenge should be at difficulty level #{@challenge_prompt.level},
     ranging from 1 (beginner) to 5 (advanced), and have no more then 1000 caracteres. The challenge should require only one file to be coded.
     The company operates in the #{@challenge_prompt.job_field} field and values #{@challenge_prompt.key_values}
