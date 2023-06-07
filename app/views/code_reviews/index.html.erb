@@ -1,4 +1,11 @@
 <h1>All my code reviews</h1>
-<%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
-<%= @prompt.code_reviews %>
 
+<%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
+
+<div class="review">
+<% @prompt.code_reviews.each do |code_review| %>
+  <div id="feedback">
+    <%= code_review.received_feedback %>
+  </div>
+<% end %>
+</div>
