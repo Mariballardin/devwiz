@@ -1,14 +1,19 @@
 <%= stylesheet_link_tag 'prompts/show' %>
 
-<!-- app/views/prompts/show.html.erb -->
-<%# <% content_for :loader %>
+<div data-controller="loader">
+  <div id="slow_warning" class="d-none" data-loader-target="loading">
+    <div class="loader" id="loader">
+  <div class="spinner"></div>
+  <p>Loading...</p>
+</div>
+  </div>
 
 <h1> <%= @prompt.programming_language%> Challenge</h1>
 <pre><%=@prompt.received_challenge %>
 </pre>
 
 
-<%= simple_form_for([@prompt, @code_review], html: { multipart: true }) do |f| %>
+<%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: {action: "submit->loader#display"} }) do |f| %>
   <%= f.input :user_answer, as: :text, input_html: { id:"code_review_user_answer", style:"display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
   <%= @code_review.user_answer %>
   <pre><code id="user-answer-preview"></code></pre>
@@ -26,4 +31,3 @@
     hljs.highlightBlock(userAnswerPreview);
   });
 </script>
-
