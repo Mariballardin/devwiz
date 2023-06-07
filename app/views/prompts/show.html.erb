@@ -9,8 +9,21 @@
 
 
 <%= simple_form_for([@prompt, @code_review], html: { multipart: true }) do |f| %>
-  <%= f.input :user_answer, as: :text, input_html: { placeholder: "Insira sua resposta aqui" } %>
+  <%= f.input :user_answer, as: :text, input_html: { id:"code_review_user_answer", style:"display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
+  <%= @code_review.user_answer %>
+  <pre><code id="user-answer-preview"></code></pre>
   <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
 <% end %>
 
-# if the user already has reviews, we can make a link and connect to prompt_code_reviews_path
+
+
+<!-- Adicione este código JavaScript no final do arquivo show.html.erb -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const userInput = document.getElementById('code_review_user_answer').value;
+    const userAnswerPreview = document.getElementById('user-answer-preview');
+    userAnswerPreview.textContent = userInput;
+    hljs.highlightBlock(userAnswerPreview);
+  });
+</script>
+

@@ -1,13 +1,23 @@
 <h1>all my challenges</h1>
 
-<% @prompts.each do |prompt| %>
-<%= prompt.programming_language %>
-<% end %>
+<div>
+<div class="title">
+  <% @prompts.each do |prompt| %>
+  <%= prompt.programming_language %>
+  <% end %>
+</div>
 
+<div class="try">
+  <% @prompts.each do |prompt| %>
+  <%= link_to 'Try again', prompt_path(prompt) %>
+  <% end %>
+</div>
 
+<div class="review">
+  <% @prompts.each do |prompt| %>
+  <%= link_to 'See my reviews', code_review_path(prompt) %>
+  <% end %>
+</div>
 
-<% @prompts.each do |prompt| %>
-<%= link_to 'Try again', prompt_path(prompt) %>
-<% end %>
-
-<%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
+  <%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
+</div>
