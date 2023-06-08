@@ -12,6 +12,7 @@ class CodeReviewsController < ApplicationController
 
   def new
     @code_review = CodeReview.new
+
   end
 
   def create
