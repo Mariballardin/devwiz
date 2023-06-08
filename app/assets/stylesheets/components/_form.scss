@@ -70,6 +70,23 @@ box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .2);
 -webkit-transform: translateY(-2px);
 transform: translateY(-2px);
 }
+
+.btn-primary {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #D95F57;
+  --bs-btn-border-color: #D95F57;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: #df4035;
+  --bs-btn-hover-border-color: #dd6f68;
+  --bs-btn-focus-shadow-rgb: 184, 81, 74;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #e17f79;
+  --bs-btn-active-border-color: #dd6f68;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #D95F57;
+  --bs-btn-disabled-border-color: #D95F57;
+}
 // .btn.btn-left {
 // float: left;
 // }
