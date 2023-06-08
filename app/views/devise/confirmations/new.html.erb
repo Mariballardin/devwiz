@@ -4,6 +4,7 @@
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
+
   <div class="form-inputs">
     <%= f.input :email,
                 required: true,
@@ -11,6 +12,7 @@
                 value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
                 input_html: { autocomplete: "email" } %>
   </div>
+
 
   <div class="form-actions">
     <%= f.button :submit, "Resend confirmation instructions" %>
