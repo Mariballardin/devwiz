@@ -9,11 +9,12 @@ class ChallengePromptService
   end
 
   def build_challenge_prompt
-    "Consider a coding challenge with a single response for a programmer who wants to prepare for an interview for the job position of #{@challenge_prompt.job_title}
-    with #{@challenge_prompt.programming_language} as the programming language. The challenge should be at difficulty level #{@challenge_prompt.level},
-    ranging from 1 (beginner) to 5 (advanced), and have no more then 1000 caracteres. The challenge should require only one file to be coded.
-    The company operates in the #{@challenge_prompt.job_field} field and values #{@challenge_prompt.key_values}
-    as its key principles. Please, divide the challenge in bullets separated by 4 dashes and topics: First the Challenge, write Challenge and write 2 bullets points: one with the challenge
+    "Consider a coding challenge with maximum 10 lines and only one single page response for a programmer who wants to prepare for an interview for the job position of #{@challenge_prompt.job_title}
+    with #{@challenge_prompt.programming_language} as the programming language.
+    The challenge should be at difficulty level #{@challenge_prompt.level},
+    ranging from 1 (beginner) to 5 (advanced). The challenge should require only one file to be coded.
+    The company operates in the #{@challenge_prompt.job_field} field.
+    Please, divide the challenge in bullets separated by 4 dashes and topics: First the Challenge, write Challenge and write 2 bullets points: one with the challenge
     and another one saying the difficulty level. After, Requirements, with 6 topics numered and each topic with the respectives bullet points. Lastly, write a 'Bonus features'
     from 1 to 3 with respectives bullet points."
     #{@challenge_prompt}
