@@ -1,4 +1,7 @@
 /* Navbar container */
+img {
+  display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: $body-bg;
+}
 .navbar {
   display: flex; justify-content: space-between; align-items: center; padding: 10px; background-color: $body-bg;
 }
