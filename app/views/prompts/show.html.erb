@@ -9,7 +9,10 @@
   </div>
 </div>
 
+<div class="title">
 <h1><%= @prompt.programming_language %> Challenge</h1>
+</div>
+
 <pre><%= @prompt.received_challenge %></pre>
 
 <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
@@ -31,16 +34,16 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/go/go.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js'></script> %>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/php/php.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/python/python.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/r/r.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/ruby/ruby.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/rust/rust.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/rust/rust.min.js'></script> %>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/swift/swift.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script> %>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script> %>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script> %>
 
   <script id="rendered-js">
     var html_value;
