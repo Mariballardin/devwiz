@@ -56,7 +56,6 @@ margin-bottom: 0;
 }
 
 .btn {
-background-color: #ed9d0a;
 color: #fff;
 padding: 4px 10px;
 text-decoration: none;
@@ -71,16 +70,20 @@ box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .2);
 -webkit-transform: translateY(-2px);
 transform: translateY(-2px);
 }
-.btn.btn-left {
-float: left;
-}
-.btn.btn-right {
-float: right;
-}
+// .btn.btn-left {
+// float: left;
+// }
+// .btn.btn-right {
+// float: right;
+// }
 .row {
 margin-bottom: 1.5rem;
 width: 100%;
 }
 .row:last-child {
 margin-bottom: 0;
+}
+
+.CodeMirror {
+  height: 100vh;
 }

@@ -10,10 +10,11 @@
 </div>
 
 <div id="title">
+<%= image_tag 'hat.svg' %>
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
 
-<div class="container text-center">
+<div class="container-fluid">
   <div class="row">
     <pre class="col first">
     <%= @prompt.received_challenge %>
