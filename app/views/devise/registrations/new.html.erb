@@ -4,6 +4,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :name,
+              required: true %>
+
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -15,6 +18,10 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
+    <%= f.input :photo,
+                as: :file,
+                input_html: { class: 'rounded', id: "photo-input" },
+                label: '<i class="fas fa-download"></i> Photo'.html_safe %>
   </div>
 
   <div class="form-actions">
