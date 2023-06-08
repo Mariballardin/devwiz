@@ -1,5 +1,5 @@
 class Prompt < ApplicationRecord
-  LANGUAGES = %w(C C++ C# Go Java JavaScript Kotlin MATLAB PHP Python R Ruby Rust Swift TypeScript)
+  LANGUAGES = %w(C C++ C# Go JavaScript PHP Python R Ruby Swift)
   belongs_to :user
   has_many :code_reviews
   validates :programming_language, presence: true
