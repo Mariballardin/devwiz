@@ -77,8 +77,8 @@ transform: translateY(-2px);
 // float: right;
 // }
 .row {
-margin-bottom: 1.5rem;
-width: 100%;
+margin-bottom: 15px;
+width: 80%;
 }
 .row:last-child {
 margin-bottom: 0;
@@ -86,4 +86,8 @@ margin-bottom: 0;
 
 .CodeMirror {
   height: 100vh;
+}
+
+.row {
+margin-right: 10px;
 }
