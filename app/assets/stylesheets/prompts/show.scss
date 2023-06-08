@@ -9,6 +9,8 @@ pre {
 
 .first {
   background-color: white;
+  border-radius: 10px;
+  padding: 33px;
 }
 
 // form {
@@ -19,4 +21,6 @@ pre {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  border-radius: 10px;
 }
+
