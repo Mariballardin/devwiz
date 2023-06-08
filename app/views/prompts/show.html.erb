@@ -3,49 +3,106 @@
 <div data-controller="loader">
   <div id="slow_warning" class="d-none" data-loader-target="loading">
     <div class="loader" id="loader">
-  <div class="spinner"></div>
-  <p>Loading...</p>
-</div>
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
   </div>
+</div>
 
-<h1> <%= @prompt.programming_language%> Challenge</h1>
-<pre><%=@prompt.received_challenge %>
-</pre>
+<h1><%= @prompt.programming_language %> Challenge</h1>
+<pre><%= @prompt.received_challenge %></pre>
 
-
-<%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: {action: "submit->loader#display"} }) do |f| %>
-  <%= f.input :user_answer, as: :text, input_html: { id:"code_review_user_answer", style:"display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
+<%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
+  <%= f.input :user_answer, as: :text, input_html: { id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
   <%= @code_review.user_answer %>
   <pre><code id="user-answer-preview"></code></pre>
   <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
 <% end %>
 
-<body translate="no" >
-<section>
-<div class="container">
-<div class="code-container">
-</div>
+<body translate="no">
+  <section>
+    <div class="container">
+      <div class="code-container">
+      </div>
+    </div>
+  </section>
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/go/go.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/php/php.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/python/python.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/r/r.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/ruby/ruby.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/rust/rust.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/swift/swift.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script>
 
-</div>
-</section>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
-<script id="rendered-js" >
-var html_value;
-var editor = CodeMirror.fromTextArea(document.getElementById("code_review_user_answer"), {
-    styleActiveLine: true,
-    lineNumbers: true,
-    matchBrackets: true,
-    autoCloseBrackets: true,
-    autoCloseTags: true,
-    mode: "javascript",
-    //  intepolar a linguagem aqui e add mais la em cima
-});
-</script>
+  <script id="rendered-js">
+    var html_value;
+    var language = "<%= @prompt.programming_language.downcase %>";
+    var mode = "";
+
+    // Map programming language to CodeMirror mode
+    switch (language) {
+      case "c":
+      case "c++":
+      case "c#":
+        mode = "text/x-csrc";
+        break;
+      case "go":
+        mode = "text/x-go";
+        break;
+      case "java":
+        mode = "text/x-java";
+        break;
+      case "javascript":
+        mode = "text/javascript";
+        break;
+      case "kotlin":
+        mode = "text/x-kotlin";
+        break;
+      case "matlab":
+        mode = "text/x-octave";
+        break;
+      case "php":
+        mode = "application/x-httpd-php";
+        break;
+      case "python":
+        mode = "text/x-python";
+        break;
+      case "r":
+        mode = "text/x-rsrc";
+        break;
+      case "ruby":
+        mode = "text/x-ruby";
+        break;
+      case "rust":
+        mode = "text/x-rustsrc";
+        break;
+      case "swift":
+        mode = "text/x-swift";
+        break;
+      case "typescript":
+        mode = "text/typescript";
+        break;
+      default:
+        mode = "text/plain";
+    }
+
+    var editor = CodeMirror.fromTextArea(document.getElementById("code_review_user_answer"), {
+      styleActiveLine: true,
+      lineNumbers: true,
+      matchBrackets: true,
+      autoCloseBrackets: true,
+      autoCloseTags: true,
+      mode: mode,
+    });
+  </script>
 </body>
 
 </html>
