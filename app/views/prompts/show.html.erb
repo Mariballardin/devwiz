@@ -9,18 +9,26 @@
   </div>
 </div>
 
-<div class="title">
-<h1><%= @prompt.programming_language %> Challenge</h1>
+<div id="title">
+  <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
 
-<pre><%= @prompt.received_challenge %></pre>
+<div class="container text-center">
+  <div class="row">
+    <pre class="col first">
+    <%= @prompt.received_challenge %>
+    </pre>
 
-<%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
-  <%= f.input :user_answer, as: :text, input_html: { id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
-  <%= @code_review.user_answer %>
-  <pre><code id="user-answer-preview"></code></pre>
-  <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
-<% end %>
+    <div class="col second">
+    <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
+      <%= f.input :user_answer, as: :text, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
+      <%= @code_review.user_answer %>
+      <pre><code id="user-answer-preview"></code></pre>
+      <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+    <% end %>
+    </div>
+  </div>
+</div>
 
 <body translate="no">
   <section>
