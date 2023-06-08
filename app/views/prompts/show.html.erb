@@ -9,15 +9,27 @@
   </div>
 </div>
 
-<h1><%= @prompt.programming_language %> Challenge</h1>
-<pre><%= @prompt.received_challenge %></pre>
+<div id="title">
+<%= image_tag 'hat.svg' %>
+  <h2><%= @prompt.programming_language %> Challenge</h2>
+</div>
 
-<%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
-  <%= f.input :user_answer, as: :text, input_html: { id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, style: 'width: 1200px; height: 700px;', placeholder: "Enter your answer here" } %>
-  <%= @code_review.user_answer %>
-  <pre><code id="user-answer-preview"></code></pre>
-  <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
-<% end %>
+<div class="container-fluid">
+  <div class="row">
+    <pre class="col first">
+    <%= @prompt.received_challenge %>
+    </pre>
+
+    <div class="col second">
+    <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
+      <%= f.input :user_answer, as: :text, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
+      <%= @code_review.user_answer %>
+      <pre><code id="user-answer-preview"></code></pre>
+      <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+    <% end %>
+    </div>
+  </div>
+</div>
 
 <body translate="no">
   <section>
@@ -31,16 +43,16 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/go/go.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/java/java.min.js'></script> %>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/php/php.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/python/python.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/r/r.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/ruby/ruby.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/rust/rust.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/rust/rust.min.js'></script> %>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/swift/swift.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script> %>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script> %>
+  <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script> %>
 
   <script id="rendered-js">
     var html_value;

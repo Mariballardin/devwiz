@@ -25,7 +25,7 @@ class CodeReviewService
         ],
         temperature: 0.7,
         stream: false,
-        max_tokens: 1000
+        max_tokens: 5000
       }
     )
     return response["choices"][0]["message"]["content"]
