@@ -3,20 +3,19 @@ pre {
   overflow:visible;
 }
 
-#title {
-  font-size: 2px;
-}
 
 .first {
-  background-color: white;
+  // width: 100%;
   border-radius: 10px;
   padding: 33px;
+  margin: 20px auto 25px;
 }
 
-// form {
-
-// }
-
+.container-fluid{
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 10px;
+  margin: 20px auto 25px;
+}
 .columns-container {
   display: flex;
   flex-direction: column;
@@ -26,4 +25,11 @@ pre {
 
 #hat {
   display: flex;
+  padding: 20px;
+  margin: 20px auto 25px;
+  width: 100%;
+
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 20px;
 }
