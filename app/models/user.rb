@@ -7,4 +7,5 @@ class User < ApplicationRecord
   has_many :prompts, dependent: :destroy
 
   validates :email, presence: true, uniqueness: true
+  validates :photo, presence: true
 end

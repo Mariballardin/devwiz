@@ -1,0 +1,125 @@
+#hat {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+.bts {
+
+}
+.form {
+  max-width: 600px;
+  margin: 10px auto;
+  padding: 36px;
+  border-radius: 14px;
+  background-color: #fcfcfc;
+  box-shadow: 1px 4px 10px 1px #aaa;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+  /* ----------
+  WRAPPERS & CONTAINERS
+  ---------- */
+  section {
+  position: relative;
+  padding: 2.5rem 0;
+  }
+  .container {
+  position: relative;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 970px;
+  }
+  section:after, .container:after, .row:after {
+  display: table;
+  content: '';
+  clear: both;
+  }
+  /* ----------
+  CODE BLOCK
+  ---------- */
+  .code-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+  }
+  .code-container:last-child {
+  margin-bottom: 0;
+  }
+
+  .btn {
+  color: #fff;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .15);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 200ms -webkit-transform ease, 200ms transform ease, 200ms box-shadow ease;
+  transition: 200ms -webkit-transform ease, 200ms transform ease, 200ms box-shadow ease;
+  }
+  .btn:hover {
+  box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .2);
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+  }
+
+  .btn:active {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  .btn-primary {
+    --bs-btn-color: #000;
+    --bs-btn-bg: #D95F57;
+    --bs-btn-border-color: #D95F57;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #df4035;
+    --bs-btn-hover-border-color: #dd6f68;
+    --bs-btn-focus-shadow-rgb: 184, 81, 74;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #df4035;
+    --bs-btn-active-border-color: #dd6f68;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: #D95F57;
+    --bs-btn-disabled-border-color: #D95F57;
+  }
+  // .btn.btn-left {
+  // float: left;
+  // }
+  // .btn.btn-right {
+  // float: right;
+  // }
+  .row {
+  margin-bottom: 15px;
+  width: 100%;
+  }
+  .row:last-child {
+  margin-bottom: 0;
+  }
+
+  .CodeMirror {
+    height: 100vh;
+  }
+
+  .row {
+  margin-right: 10px;
+  }
