@@ -11,11 +11,11 @@
   <div class="container-fluid">
   <div class="title">
     <% @prompts.each do |prompt| %>
-    <ul class="list">
+    <div class="list">
     <h4><%= prompt.programming_language %></h4>
     <li><%= link_to 'Try again', prompt_path(prompt) %></li>
     <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
-    </ul>
+    </div>
     <% end %>
   </div>
 </div>

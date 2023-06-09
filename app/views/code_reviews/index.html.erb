@@ -1,13 +1,26 @@
 <%= stylesheet_link_tag 'code_reviews/index' %>
 
-<h1>All my code reviews</h1>
-
-<%= link_to 'Back', root_path, class: 'btn btn-primary rounded' %>
-
-<div class="review">
-<% @prompt.code_reviews.each do |code_review| %>
-  <div id="feedback">
-    <pre><%=code_review.received_feedback %></pre>
+<div id="hat">
+  <div class="img">
+    <%= image_tag 'hat.svg' %>
   </div>
-<% end %>
+  <h2>All my code reviews</h2>
 </div>
+
+
+<%# <div class="d-flex"> %>
+  <div class="container-fluid">
+    <div class="title">
+     <div class="content first">
+          <h4><%= @prompt.programming_language %></h4>
+        </div>
+      <% @prompt.code_reviews.each do |code_review| %>
+
+          <div class="feedback">
+            <p id="code-review"><pre><%=code_review.received_feedback %></pre></p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+<%# </div> %>
+  <%= link_to 'Back', prompts_path, id:"botao", class: 'btn btn-primary rounded' %>

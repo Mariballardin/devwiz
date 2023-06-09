@@ -1,3 +1,119 @@
-.footer {
-  visibility: hidden;
+pre {
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
+}
+
+// pre::first-line {
+//   font-weight: bold !important;
+// }
+
+#hat {
+  display: flex;
+  padding: 20px;
+  margin: 20px auto 25px;
+  width: 100%;
+
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 20px;
+}
+
+
+.container-fluid{
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 10px;
+  margin: 20px auto 25px;
+  padding: 20px;
+
+}
+
+.columns-container {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  border-radius: 10px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.btn {
+  margin: 40px;
+  padding: 8px 24px;
+  border-radius: 16px;
+}
+
+p {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+#code-review {
+  max-width: 100% !important;
+
+}
+.title {
+  // background-color: #E4EAFC;
+  padding: 20px;
+}
+
+.content {
+  background-color: white;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.feedback {
+  background-color: white;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+a {
+  text-decoration: none;
+}
+
+
+p {
+  font-size: 14px;
+
+}
+
+.title {
+  // background-color: #E4EAFC;
+  padding: 20px;
+}
+
+// .list {
+//   background-color: white;
+//   padding: 25px;
+//   margin: 10px;
+//   border-radius: 12px;
+//   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+// }
+
+a {
+  text-decoration: none;
+}
+
+
+
+.first {
+  // width: 100%;
+  border-radius: 10px;
+  // background-color: white;
+  // margin: 20px 0 0 20px;
+  padding: 30px;
 }
