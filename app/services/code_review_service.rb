@@ -10,8 +10,8 @@ class CodeReviewService
   end
 
   def build_feedback_prompt
-    "Consider this challenge: #{@prompt.received_challenge} and the user answer: #{@code_review.user_answer} create a feedback
-    for the user saying exactly where they have made mistakes
+    "Consider this challenge: #{@prompt.received_challenge} and the user answer: #{@code_review.user_answer} create a one single page
+    feedback for the user saying exactly where they have made mistakes
     solving the coding challenge. You should add some advices about what they should study to improve their performance."
   end
 
@@ -25,7 +25,7 @@ class CodeReviewService
         ],
         temperature: 0.7,
         stream: false,
-        max_tokens: 1000
+        max_tokens: 800
       }
     )
     return response["choices"][0]["message"]["content"]
