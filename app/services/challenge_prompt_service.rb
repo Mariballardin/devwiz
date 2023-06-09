@@ -14,8 +14,11 @@ class ChallengePromptService
     The challenge should be at difficulty level #{@challenge_prompt.level},
     ranging from 1 (beginner) to 5 (advanced). The challenge should require only one file to be coded.
     The company operates in the #{@challenge_prompt.job_field} field.
-    Please, divide the challenge in bullets separated by 4 dashes and topics: First the Challenge, write Challenge and write 2 bullets points: one with the challenge
-    and another one saying the difficulty level. After, Requirements, with 6 topics numered and each topic with the respectives bullet points. Lastly, write a 'Bonus features'
+    Please, divide the challenge in bullets separated by 4 dashes and topics:
+    First the challenge with 2 bullets points: one with the challenge itself 
+    and another one saying the difficulty level.
+    After, Requirements, with 6 topics numered and each topic with the respectives bullet points.
+    Lastly, write a 'Bonus features'
     from 1 to 3 with respectives bullet points."
     #{@challenge_prompt}
   end
