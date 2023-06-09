@@ -2,10 +2,16 @@
 body  {
   background-color: $body-bg;
 }
+.span {
 
+  margin-bottom: 30px;
+}
+h1 {
+  font-size: 40px;
+}
 h2 {
-  font-size: 25px;
-  margin-bottom: 4px;
+  font-size: 30px;
+  margin-bottom: 40px;
 }
 .wraper {
   margin-right: auto;
@@ -15,6 +21,19 @@ h2 {
   padding-left: 80px;
 }
 
+img {
+  width: 80%;
+}
 .btn-primary {
   color: white;
+}
+
+.content {
+  margin-top:100px;
+  margin-bottom: 200px;
+}
+
+// não funciona
+p {
+  font: 56px !important;
 }
