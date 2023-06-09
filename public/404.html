@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>YAYA</title>
+  <title>404 Error</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     * {
@@ -122,7 +122,7 @@ h1 {
     font: bold 200px/200px Arial, sans-serif;
     left: 50%;
     top: 50%;
-    margin-top: -100px;
+    margin-top: -250px;
     width: 100%;
     margin-left: -50%;
     height: 200px;
@@ -130,6 +130,22 @@ h1 {
     color: transparent;
     text-shadow: 0 0 30px rgba(0, 0, 0, .5);
     animation: asdd 2s linear infinite;
+}
+
+p {
+    z-index: 2;
+    position: absolute;
+    font: bold 100px/200px Arial, sans-serif;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    width: 100%;
+    margin-left: -50%;
+    height: 200px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    animation: asddd 6s linear infinite;
 }
 
 @keyframes asdd {
@@ -146,11 +162,29 @@ h1 {
         text-shadow: 0 0 40px rgba(0, 0, 0, .8);
     }
 }
+@keyframes asddd {
+    10% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    33% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    }
+    66% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+    100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, .8);
+    }
+}
   </style>
 </head>
 
 <body>
   <h1>404</h1>
+  <p>Ops. I think we did something wrong dude</p>
 
 <div class="frame">
     <div></div>
