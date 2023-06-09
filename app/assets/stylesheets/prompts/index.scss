@@ -33,7 +33,7 @@ pre {
 h4 {
   font-size: 16px;
   font-weight: 400;
-  margin: 30px;
+  margin: 10px;
 }
 
 .btn {
@@ -44,5 +44,22 @@ h4 {
 
 p {
   font-size: 14px;
+  text-decoration: none;
+}
+
+.title {
+  // background-color: #E4EAFC;
+  padding: 20px;
+}
+
+ul {
+  background-color: white;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+a {
   text-decoration: none;
 }
