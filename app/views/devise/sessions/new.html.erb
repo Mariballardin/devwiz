@@ -6,7 +6,7 @@
       <%= image_tag 'hat.svg' %>
     </div>
   <h2>Log in</h2>
-  
+
   </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
       <div class="form-inputs">
@@ -23,9 +23,12 @@
 
 
         <%= f.button :submit, value: "login", class: "btn btn-primary mt-4 Log in", id:"roun" %>
-
-
       </div>
+
+      <div class="sc-edd8a27f-0 hYQooG"><span color="#7A7A68" style="text-align:center;padding-left:2.07rem;padding-right:2.07rem" class="sc-bczRLJ ggixay">OR</span></div>
+
+
+
       <div class="bts">
         <%= render "devise/shared/links" %>
       </div>
