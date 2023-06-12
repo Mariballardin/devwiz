@@ -12,6 +12,37 @@ a {
   text-decoration: none;
 }
 
+#forgot {
+    position: absolute;
+    margin: 0;
+    bottom: 150px;
+    left: 405px;
+    box-shadow: none;
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    padding: 4px 10px;
+    transition: 200ms transform ease, 200ms box-shadow ease;
+}
+
+#forgot > a {
+  color: black !important;
+  font-weight: 400;
+}
+
+#sign {
+  background-color: #fff;
+  border-radius: 80px;
+}
+
+#sign > a {
+  color: #D95F57;
+}
+
+#roun {
+  border-radius: 80px;
+}
+
 .form {
   max-width: 600px;
   margin: 10px auto;
@@ -112,10 +143,6 @@ a {
   }
   .row:last-child {
   margin-bottom: 0;
-  }
-
-  .CodeMirror {
-    height: 100vh;
   }
 
   .row {
