@@ -4,7 +4,7 @@
 <% end %>
 </div>
 
-<div class="btn">
+<div class="btn btn-primary mt-4" id="sign">
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to "Sign up", new_registration_path(resource_name) %><br />
 <% end %>
