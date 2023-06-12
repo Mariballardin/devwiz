@@ -7,7 +7,7 @@
   <h2>My challenges</h2>
 </div>
 
-<% if @prompt.nil? %>
+<% if current_user.prompts.count.zero? %>
   <p class="no-challenge">Hey, <%= current_user.name %>. You don't have any challenge yet. </p>
 <% else %>
   <div class="d-flex">

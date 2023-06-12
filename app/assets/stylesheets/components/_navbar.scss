@@ -69,11 +69,13 @@
 .dropdown-menu-end {
   margin-right: 30px;
   padding: 3px;
+  border: 1px dashed gray;
 
 }
 
 .logout:hover {
 background-color: $body-bg;
-background-color: #333;
-animation: underline 0.3s forwards;
+text-decoration: underline;
+
+
 }
