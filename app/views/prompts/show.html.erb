@@ -63,7 +63,9 @@
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script> %>
 
   <script id="rendered-js">
-    var html_value;
+
+    setTimeout(() => {
+      var html_value;
     var language = "<%= @prompt.programming_language.downcase %>";
     var mode = "";
 
@@ -122,7 +124,10 @@
       autoCloseTags: true,
       mode: mode,
     });
+  // all your js code
+}, 1000)
   </script>
+
 </body>
 
 </html>
