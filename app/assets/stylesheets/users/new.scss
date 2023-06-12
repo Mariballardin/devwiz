@@ -43,6 +43,28 @@ a {
   border-radius: 80px;
 }
 
+.hYQooG {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.hYQooG::before {
+  content: "";
+  display: block;
+  background-color: rgb(195, 195, 186);
+  flex: 1 1 0%;
+  height: 2px
+}
+
+.hYQooG::after {
+  content: "";
+  display: block;
+  background-color: rgb(195, 195, 186);
+  flex: 1 1 0%;
+  height: 2px
+}
+
 .form {
   max-width: 600px;
   margin: 10px auto;
