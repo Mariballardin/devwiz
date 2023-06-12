@@ -2,7 +2,7 @@ class PromptsController < ApplicationController
   before_action :set_prompt, only: [:show]
 
   def index
-    @prompts = Prompt.where(user: current_user)
+    @prompts = Prompt.where(user: current_user) # current_user.prompts
   end
 
   def new
