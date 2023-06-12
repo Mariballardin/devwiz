@@ -11,6 +11,30 @@
 a {
   text-decoration: none;
 }
+
+#forgot {
+    position: absolute;
+    margin: 0;
+    bottom: 150px;
+    left: 170px;
+    box-shadow: none;
+    font-size: 12px;
+    text-decoration: underline;
+    color: black;
+    padding: 4px 10px;
+    transition: 200ms transform ease, 200ms box-shadow ease;
+}
+
+#forgot > a {
+  color: black !important;
+  font-weight: 400;
+}
+
+#roun {
+  border-radius: 80px;
+  width: 100%;
+}
+
 .bts {
 
 }
