@@ -7,3 +7,4 @@
 //= link code_reviews/show.css
 //= link code_reviews/index.css
 //= link users/new.css
+//= link registrations/new.css

@@ -6,7 +6,7 @@
       <%= image_tag 'hat.svg' %>
     </div>
   <h2>Log in</h2>
-  <hr>
+  
   </div>
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
       <div class="form-inputs">
@@ -21,7 +21,7 @@
       </div>
       <div class="d-grid gap-2 col-6 mx-auto form-actions">
 
-        <%= f.button :submit, value: "login", class: "btn btn-primary rounded mt-4 rounded Log in" %>
+        <%= f.button :submit, value: "login", class: "btn btn-primary mt-4 Log in" %>
 
       </div>
       <div class="bts">
