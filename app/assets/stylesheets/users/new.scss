@@ -16,7 +16,7 @@ a {
     position: absolute;
     margin: 0;
     bottom: 150px;
-    left: 170px;
+    left: 405px;
     box-shadow: none;
     font-size: 12px;
     text-decoration: underline;
@@ -30,14 +30,19 @@ a {
   font-weight: 400;
 }
 
+#sign {
+  background-color: #fff;
+  border-radius: 80px;
+}
+
+#sign > a {
+  color: #D95F57;
+}
+
 #roun {
   border-radius: 80px;
-  width: 100%;
 }
 
-.bts {
-
-}
 .form {
   max-width: 600px;
   margin: 10px auto;
@@ -138,10 +143,6 @@ a {
   }
   .row:last-child {
   margin-bottom: 0;
-  }
-
-  .CodeMirror {
-    height: 100vh;
   }
 
   .row {
