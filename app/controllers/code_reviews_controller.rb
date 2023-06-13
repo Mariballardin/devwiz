@@ -8,7 +8,6 @@ class CodeReviewsController < ApplicationController
 
   def index
     @code_reviews = @prompt.code_reviews
-  
   end
 
   def new
