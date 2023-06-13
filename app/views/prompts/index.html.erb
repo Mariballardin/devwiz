@@ -43,10 +43,11 @@
             <li><%= link_to 'Try again', prompt_path(prompt) %></li>
             <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
             <li><%= link_to 'Delete', prompt_path(prompt), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
+            </div>
         <% end %>
       </div>
   </div>
   </div>
 <% end %>
 
-<%= link_to 'Back', root_path, id:"botao", class: 'btn btn-primary' %>
+<%= link_to 'Back', root_path, class: 'btn btn-primary' %>

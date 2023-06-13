@@ -43,9 +43,13 @@
 <main>
 <%# <div class="container-fluid">
   <div class="row"> %>
-    <pre class="first">
+<button class="btn" data-clipboard-target="#contentToCopy">Copiar</button>
+<div id="contentToCopy">
+  <pre class="first">
     <%= @prompt.received_challenge %>
     </pre>
+</div>
+
 
   <div class="code-editor">
       <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
