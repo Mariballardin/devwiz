@@ -41,11 +41,16 @@
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
 <main>
-<%# <div class="container-fluid">
-  <div class="row"> %>
-    <pre class="first">
-    <%= @prompt.received_challenge %>
+
+<div class="input-group" data-controller="clipboard" data-clipboard-feedback-text-value="Copied!">
+    <pre data-clipboard-target="input" class="form-control input-group-append first">
+      <%= @prompt.received_challenge %>
     </pre>
+    <button id="copy-button" class="btn btn-outline-primary" data-action="click->clipboard#copy">Copy to Clipboard</button>
+</div>
+
+
+
 
   <div class="code-editor">
       <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
