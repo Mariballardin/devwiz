@@ -1,10 +1,10 @@
 
- <div class="form">
+<div class="form">
   <%= simple_form_for(prompt, html: { multipart: true, data: {action: "submit->loader#display"} }) do |f| %>
-    <%= f.input :programming_language, prompt: "Choose a language", collection: Prompt::LANGUAGES, input_html: { id:'light', class: 'rounded light' }, label: 'Programming language *' %>
-    <%= f.input :level, :placeholder => "1-5", as: :integer, input_html: { min: '0', max: '5', step: '1' }, label: 'Level *' %>
-    <%= f.input :job_title, :placeholder => "Senior Frontend Developer",input_html: {  id: "job", class: 'rounded' }, label: 'Job title *' %>
-    <%= f.input :job_field, :placeholder =>  "Arts and Entertainment", input_html: {  id: "field", class: 'rounded' }, label: 'Job field *' %>
+    <%= f.input :programming_language, prompt: "Choose a language", collection: Prompt::LANGUAGES, input_html: { class: 'rounded light' } %>
+    <%= f.input :level, collection: (1..5), include_blank: false, input_html: { class: 'rounded light' } %>
+    <%= f.input :job_title, prompt: "Choose a role", collection: Prompt::JOBS, include_blank: false,  input_html: { id: "job", class: 'rounded light' } %>
+    <%= f.input :job_field, prompt: "Choose a industry", collection: Prompt::FIELDS, include_blank: false, input_html: { id: "field", class: 'rounded light' } %>
     <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
   <% end %>
 </div>
