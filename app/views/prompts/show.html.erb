@@ -26,13 +26,12 @@
     <%= @prompt.received_challenge %>
     </pre>
 
-    <%# <div class="col second"> %>
     <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
       <%= f.input :user_answer, as: :text, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
       <%= @code_review.user_answer %>
       <pre><code id="user-answer-preview"></code></pre>
       <div class="d-grid gap-2 col-6 mx-auto">
-        <%= f.button :submit, id:"botao", class: "btn btn-primary rounded",
+        <%= f.button :submit, id:"botao", class: "btn btn-primary" %>
             value: 'Submit for review' %>
       </div>
     <% end %>
