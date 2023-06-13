@@ -43,9 +43,10 @@
             <li><%= link_to 'Try again', prompt_path(prompt) %></li>
             <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
             <li><%= link_to 'Delete', prompt_path(prompt), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></li>
+            </div>
         <% end %>
       </div>
-  </div>
+    </div>
   </div>
 <% end %>
 
