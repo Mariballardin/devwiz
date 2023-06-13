@@ -8,6 +8,10 @@ pre {
     word-wrap: break-word; /* IE 5.5+ */
 }
 
+img, svg {
+  width: 30px;
+}
+
 // pre::first-line {
 //   font-weight: bold !important;
 // }
