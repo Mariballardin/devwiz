@@ -56,11 +56,11 @@ CODE BLOCK
 // }
 
 .btn {
+border-radius: 80px;
 color: #fff;
 padding: 4px 10px;
 margin-bottom: 20px;
 text-decoration: none;
-border-radius: 3px;
 box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .15);
 -webkit-backface-visibility: hidden;
 -webkit-transition: 200ms -webkit-transform ease, 200ms transform ease, 200ms box-shadow ease;
@@ -107,9 +107,11 @@ width: 100%;
 margin-bottom: 0;
 }
 
-// .CodeMirror {
-//   height: 100vh;
-// }
+ .CodeMirror {
+height: calc(100vh - 100px);
+width: 100%;
+height: calc(100vh - 100px);
+ }
 
 .row {
 margin-right: 10px;
