@@ -1,14 +1,18 @@
-
 <div class="row">
+  <div class="all col-md-6">
+    <div class="typewriter">
+      <h1>AI-DRIVEN <br> CODING <br> CHALLENGES</h1>
+    </div>
 
-  <div class="all col -md-6">
-  <div class="typewriter"><h1>AI-DRIVEN <br> CODING <br> CHALLENGES</h1></div>
-
-    <div class="typewriter"><p>Personalized coding challenges to land your dream job.</p></div>
-    <%= link_to new_prompt_path do %>
-        <div class="btn btn-primary"> GET STARTED </div>
-    <% end %>
+    <div class="content">
+      <p>Personalized coding challenges to land your dream job.</p>
+      <%= link_to new_prompt_path, class: "btn btn-primary" do %>
+        GET STARTED
+      <% end %>
+    </div>
   </div>
 
-  <div class="imge col -md-6"><%= image_tag "nt.svg", class: "img-fluid" %></div>
+  <div class="imge col-md-6">
+    <%= image_tag "nt.svg", class: "img-fluid" %>
+  </div>
 </div>
