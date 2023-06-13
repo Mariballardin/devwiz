@@ -22,7 +22,8 @@ function initializeTypewriter() {
   // Loop through the languages array
   for (let i = 0; i < languages.length; i++) {
     typewriter
-      .typeString(' ' + languages[i])
+      .typeString('\n') // Add a newline before each language
+      .typeString(languages[i])
       .pauseFor(800)
       .deleteChars(languages[i].length);
   }
