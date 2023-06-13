@@ -58,7 +58,7 @@ class Prompt < ApplicationRecord
     "Virtual Reality/Augmented Reality Engineer"
   ]
 
-  LANGUAGES = %w(C C++ C# Go JavaScript PHP Python R Ruby Swift)
+  LANGUAGES = %w(C C++ C# Go JavaScript PHP Python Ruby Swift)
   belongs_to :user
   has_many :code_reviews, dependent: :destroy
 

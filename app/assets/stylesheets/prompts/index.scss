@@ -3,6 +3,10 @@ pre {
   overflow:visible;
 }
 
+img, svg {
+  width: 30px;
+}
+
 
 #hat {
   display: flex;
@@ -50,12 +54,12 @@ p {
 
 .title {
   // background-color: #E4EAFC;
-  padding: 20px;
+  padding: 0;
 }
 
 .list {
   background-color: white;
-  padding: 25px;
+  padding: 0 30px 20px;
   margin: 10px;
   border-radius: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
