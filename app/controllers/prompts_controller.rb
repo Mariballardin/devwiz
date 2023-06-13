@@ -1,5 +1,5 @@
 class PromptsController < ApplicationController
-  before_action :set_prompt, only: [:show]
+  before_action :set_prompt, only: [:show, :destroy]
 
   def index
     @prompts = Prompt.where(user: current_user) # current_user.prompts
@@ -30,6 +30,11 @@ class PromptsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @prompt.destroy
+    redirect_to prompts_path, notice: 'Challenge was successfully deleted.'
   end
 
   private
