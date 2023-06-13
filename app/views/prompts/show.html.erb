@@ -20,24 +20,30 @@
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
+<main>
+<%# <div class="container-fluid">
+  <div class="row"> %>
     <pre class="first">
     <%= @prompt.received_challenge %>
     </pre>
 
-    <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
-      <%= f.input :user_answer, as: :text, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
-      <%= @code_review.user_answer %>
-      <pre><code id="user-answer-preview"></code></pre>
-      <div class="d-grid gap-2 col-6 mx-auto">
-        <%= f.button :submit, id:"botao", class: "btn btn-primary" %>
-            value: 'Submit for review' %>
-      </div>
-    <% end %>
-
+  <div class="code-editor">
+      <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
+        <%= f.input :user_answer, as: :text, label: false, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
+        <% @code_review.user_answer %>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <%= f.button :submit, id:"botao", class: "btn btn-primary",
+              value: 'Submit for review' %>
+        <%# </div> %>
+      <% end %>
   </div>
-</div>
+  <%# </div>
+</div> %>
+
+
+
+
+</main>
 
 <body translate="no">
   <section>
@@ -46,7 +52,11 @@
       </div>
     </div>
   </section>
-</div>
+
+
+
+
+ <%# JavaScript code %>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/go/go.min.js'></script>
