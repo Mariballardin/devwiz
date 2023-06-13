@@ -15,11 +15,31 @@
 
 <div id="hat">
   <div class="img">
-    <%= image_tag 'hat.svg' %>
+    <% if @prompt.programming_language == "Python" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+    <% elsif @prompt.programming_language == "JavaScript" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+    <% elsif @prompt.programming_language == "Ruby" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+    <% elsif @prompt.programming_language == "C" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+    <% elsif @prompt.programming_language == "C++" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+    <% elsif @prompt.programming_language == "C#" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+    <% elsif @prompt.programming_language == "Go" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
+    <% elsif @prompt.programming_language == "PHP" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+    <% elsif @prompt.programming_language == "Swift" %>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
+    <% else %>
+      <!-- Default icon or error handling -->
+      <img src="hat.svg" />
+    <% end %>
   </div>
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
-
 <main>
 <%# <div class="container-fluid">
   <div class="row"> %>

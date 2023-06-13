@@ -15,9 +15,35 @@
       <div class="title">
         <% @prompts.each do |prompt| %>
           <div class="list">
-          <h4><%= prompt.programming_language %></h4>
-          <li><%= link_to 'Try again', prompt_path(prompt) %></li>
-          <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
+          <div id="hat">
+            <div class="img">
+              <% if prompt.programming_language == "Python" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+              <% elsif prompt.programming_language == "JavaScript" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+              <% elsif prompt.programming_language == "Ruby" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+              <% elsif prompt.programming_language == "C" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+              <% elsif prompt.programming_language == "C++" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+              <% elsif prompt.programming_language == "C#" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+              <% elsif prompt.programming_language == "Go" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
+              <% elsif prompt.programming_language == "PHP" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+              <% elsif prompt.programming_language == "Swift" %>
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
+              <% else %>
+                <!-- Default icon or error handling -->
+                <img src="hat.svg" />
+              <% end %>
+            </div>
+            <h4><%= prompt.programming_language %></h4>
+            </div>
+            <li><%= link_to 'Try again', prompt_path(prompt) %></li>
+            <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
           </div>
         <% end %>
       </div>
