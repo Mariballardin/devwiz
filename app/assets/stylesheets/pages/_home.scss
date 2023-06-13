@@ -12,6 +12,7 @@ h1 {
 p {
   font-size: 24px;
   letter-spacing: 1.5px;
+  margin-top: 180px;
 
 }
 h2 {
@@ -28,6 +29,18 @@ h2 {
 
 .btn-primary {
   color: white;
+}
+
+.typewriter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .typewriter h1 {
@@ -52,10 +65,12 @@ h2 {
 
 .all {
   margin-top: 110px;
+  position: relative;
 }
 
 .imge {
   margin-top: 80px;
+  position: relative;
 }
 
 .no-challenge {
