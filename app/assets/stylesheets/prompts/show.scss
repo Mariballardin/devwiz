@@ -65,15 +65,6 @@ pre::first-line{
 }
 
 
-#everything {
-  background-color: black !important;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  gap: 10px;
-
-}
-
 // .code-editor {
 //   height: 100vh !important;
 // }
@@ -83,7 +74,8 @@ main {
   display: grid !important;
   gap: 15px;
   grid-template-columns: 1fr 1fr;;
-  height: calc(100vh - 300px);
+  max-height: calc(100vh - 100px);
+  // max-width: 1300px !important;
 }
 
 // main > pre {
@@ -91,3 +83,25 @@ main {
 //   padding: 0;
 //   margin: 0;
 // }
+
+
+
+.text-with-icon {
+  position: relative;
+}
+
+.text-with-icon > button {
+  position: absolute;
+  top: 4%;
+  right: 1px;
+  transform: translateY(-50%);
+  margin-left: 5px; /* Espaço entre o texto e o ícone */
+  background-color: #F3F6FE;
+  border: none !important;
+
+}
+
+svg {
+  width: 25px !important;
+  height: 25px !important;
+}
