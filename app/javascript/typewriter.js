@@ -23,7 +23,7 @@ function initializeTypewriter() {
   for (let i = 0; i < languages.length; i++) {
     typewriter
       .typeString('\n') // Add a newline before each language
-      .typeString(languages[i])
+      .typeString(`<span class="red">${languages[i]}</span>`)
       .pauseFor(800)
       .deleteChars(languages[i].length);
   }
