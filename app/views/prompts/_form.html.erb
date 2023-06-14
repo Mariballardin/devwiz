@@ -5,6 +5,6 @@
     <%= f.input :level, collection: (1..5), include_blank: false, input_html: { class: 'rounded light' } %>
     <%= f.input :job_title, prompt: "Choose a role", collection: Prompt::JOBS, include_blank: false,  input_html: { id: "job", class: 'rounded light' } %>
     <%= f.input :job_field, prompt: "Choose a industry", collection: Prompt::FIELDS, include_blank: false, input_html: { id: "field", class: 'rounded light' } %>
-    <%= f.button :submit, class: "btn btn-primary mt-4 rounded" %>
+    <%= f.button :submit, class: "btn btn-primary mt-4", value:"Start Challenge" %>
   <% end %>
 </div>
