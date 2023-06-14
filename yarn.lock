@@ -841,6 +841,16 @@ source-map@^0.6.0:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+stimulus-clipboard@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/stimulus-clipboard/-/stimulus-clipboard-4.0.0.tgz#eb151cfe54a46d7c477a53dca0b3eb5a93ef4e4f"
+  integrity sha512-x4Oq4uRBs8QIEN3KnumNF6CM1YMqIZIiaczsq+CyIc9eHMvh+aGIpXQj01Efr4IL2b6P8xKFuBZr5keGxYCJhA==
+
+stimulus-use@^0.52.0:
+  version "0.52.0"
+  resolved "https://registry.yarnpkg.com/stimulus-use/-/stimulus-use-0.52.0.tgz#a52df4e2b59f3273fc6941f98fa173f0892d4e9d"
+  integrity sha512-b2Z2krSSIqKvG9ncrjMlxbX3SYg9mgL0g/1Zc25jTZjTr0//wgg7szUi9G67amBs/yLqO12GAEnudybZgYNnjA==
+
 stimulus@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-3.2.1.tgz#bf049a4379ed4ff7475515acce1f0b6fa15a0187"

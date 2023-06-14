@@ -40,37 +40,31 @@
   </div>
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
-<main>
-<%# <div class="container-fluid">
-  <div class="row"> %>
-    <pre class="first">
-    <%= @prompt.received_challenge %>
-    </pre>
 
-  <div class="code-editor">
-      <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
-        <%= f.input :user_answer, as: :text, label: false, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
-        <% @code_review.user_answer %>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <%= f.button :submit, id:"botao", class: "btn btn-primary",
-              value: 'Submit for review' %>
-        <%# </div> %>
-      <% end %>
-  </div>
-  <%# </div>
-</div> %>
 
-</main>
-<body translate="no">
-  <section>
-    <div class="container">
-      <div class="code-container">
+<main data-controller="codemirror" data-codemirror-lang-value="<%= @prompt.programming_language.downcase %>" >
+  <pre class="first text-with-icon" data-clipboard-target="source" data-controller="clipboard">
+    <button class="button clip" type="button" data-action="clipboard#copy" data-clipboard-target="button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+          <path d="M280 64h40c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128C0 92.7 28.7 64 64 64h40 9.6C121 27.5 153.3 0 192 0s71 27.5 78.4 64H280zM64 112c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16H320c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H304v24c0 13.3-10.7 24-24 24H192 104c-13.3 0-24-10.7-24-24V112H64zm128-8a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+        </svg>
+    </button>
+      <%= @prompt.received_challenge %>
+
+  </pre>
+  <div class="code-editor" data-action="resize->codemirror#resize">
+    <%= simple_form_for([@prompt, @code_review], html: { multipart: true, data: { action: "submit->loader#display" } }) do |f| %>
+      <%= f.input :user_answer, as: :text, label: false, input_html: { rows:'60', id: "code_review_user_answer", style: "display: none", class: 'code-input', maxlength: 20000, placeholder: "Enter your answer here" } %>
+      <% @code_review.user_answer %>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <%= f.button :submit, id:"botao", class: "btn btn-primary", value: 'Submit for review' %>
+        <% end %>
+
       </div>
-    </div>
-  </section>
+  </div>
+</main>
 
-
- <%# JavaScript code %>
+<%# JavaScript code %>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/clike/clike.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/go/go.min.js'></script>
@@ -86,72 +80,5 @@
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script> %>
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script> %>
 
-  <script id="rendered-js">
-
-    setTimeout(() => {
-      var html_value;
-    var language = "<%= @prompt.programming_language.downcase %>";
-    var mode = "";
-
-    // Map programming language to CodeMirror mode
-    switch (language) {
-      case "c":
-      case "c++":
-      case "c#":
-        mode = "text/x-csrc";
-        break;
-      case "go":
-        mode = "text/x-go";
-        break;
-      case "java":
-        mode = "text/x-java";
-        break;
-      case "javascript":
-        mode = "text/javascript";
-        break;
-      case "kotlin":
-        mode = "text/x-kotlin";
-        break;
-      case "matlab":
-        mode = "text/x-octave";
-        break;
-      case "php":
-        mode = "application/x-httpd-php";
-        break;
-      case "python":
-        mode = "text/x-python";
-        break;
-      case "r":
-        mode = "text/x-rsrc";
-        break;
-      case "ruby":
-        mode = "text/x-ruby";
-        break;
-      case "rust":
-        mode = "text/x-rustsrc";
-        break;
-      case "swift":
-        mode = "text/x-swift";
-        break;
-      case "typescript":
-        mode = "text/typescript";
-        break;
-      default:
-        mode = "text/plain";
-    }
-
-    var editor = CodeMirror.fromTextArea(document.getElementById("code_review_user_answer"), {
-      styleActiveLine: true,
-      lineNumbers: true,
-      matchBrackets: true,
-      autoCloseBrackets: true,
-      autoCloseTags: true,
-      mode: mode,
-    });
-  // all your js code
-}, 1000)
-  </script>
-
-</body>
 
 </html>
