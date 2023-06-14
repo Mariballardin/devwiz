@@ -39,6 +39,30 @@
                 <% end %>
               </div>
               <h4><%= prompt.programming_language %></h4>
+              <p class="mleft">Level: <%= prompt.level %></p>
+
+              <% case prompt.level %>
+                <% when 1 %>
+                  <i class="fa-solid fa-face-grin-hearts"></i>
+                <% end %>
+              <% case prompt.level %>
+                <% when 2 %>
+                  <i class="fa-solid fa-face-smile-beam"></i>
+                <% end %>
+              <% case prompt.level %>
+                <% when 3 %>
+                  <i class="fa-solid fa-face-rolling-eyes"></i>
+                <% end %>
+              <% case prompt.level %>
+                <% when 4 %>
+                  <i class="fa-solid fa-face-flushed"></i>
+                <% end %>
+              <% case prompt.level %>
+                <% when 5 %>
+                  <i class="fa-solid fa-face-dizzy"></i>
+                <% end %>
+
+              <p class="mleft">Created: <%= prompt.created_at.strftime("%d-%m-%Y") %></p> <!-- Assuming prompt has a 'created_at' attribute -->
             </div>
             <li><%= link_to 'Try again', prompt_path(prompt) %></li>
             <li><%= link_to 'See my reviews', prompt_code_reviews_path(prompt) %></li>
