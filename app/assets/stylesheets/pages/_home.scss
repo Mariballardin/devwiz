@@ -49,7 +49,7 @@ h2 {
 }
 
 .red {
-  color: rgba(0, 0, 0, 0.808);
+  color: #050031e3;
 }
 
 .typewriter .Typewriter__cursor {
@@ -91,4 +91,11 @@ h2 {
 
 #mtop {
   margin-top: 240px;
+}
+
+.btn-primary {
+  --bs-btn-bg: #050031;
+  --bs-btn-border-color: #050031;
+  --bs-btn-hover-bg: #050031e3;
+  --bs-btn-hover-border-color: #050031e3;
 }
