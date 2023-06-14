@@ -22,19 +22,26 @@ img, svg {
   padding: 20px;
   margin: 20px auto 25px;
   width: 100%;
-
   gap: 30px;
   background-color: rgba(255, 255, 255, 0.567);
   border-radius: 20px;
 }
 
+#botaoo {
+  margin-left: 120px;
+  padding: 6px 55px;
+  border-radius: 80px;
+}
 
-.container-fluid{
-  background-color: rgba(255, 255, 255, 0.567);
-  border-radius: 10px;
-  margin: 20px auto 25px;
+#img-title {
+  display: flex;
   padding: 20px;
-
+  margin: 20px auto 25px;
+  width: 100%;
+  gap: 30px;
+  background-color: rgba(255, 255, 255, 0.567);
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .columns-container {
@@ -74,7 +81,6 @@ p {
 
 .content {
   background-color: white;
-  padding: 25px;
   margin: 10px;
   border-radius: 12px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -84,7 +90,7 @@ p {
   padding: 25px;
   margin: 10px;
   border-radius: 12px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
 }
 a {
@@ -121,5 +127,4 @@ a {
   border-radius: 10px;
   // background-color: white;
   // margin: 20px 0 0 20px;
-  padding: 30px;
 }
