@@ -41,6 +41,7 @@
   <h2><%= @prompt.programming_language %> Challenge</h2>
 </div>
 
+
 <main data-controller="codemirror" data-codemirror-lang-value="<%= @prompt.programming_language.downcase %>" >
   <pre class="first text-with-icon" data-clipboard-target="source" data-controller="clipboard">
     <button class="button clip" type="button" data-action="clipboard#copy" data-clipboard-target="button">
@@ -58,6 +59,7 @@
       <div class="d-grid gap-2 col-6 mx-auto">
         <%= f.button :submit, id:"botao", class: "btn btn-primary", value: 'Submit for review' %>
         <% end %>
+
       </div>
   </div>
 </main>
@@ -77,7 +79,6 @@
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/typescript/typescript.min.js'></script> %>
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/kotlin/kotlin.min.js'></script> %>
   <%# <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/matlab/matlab.min.js'></script> %>
-
 
 
 </html>
