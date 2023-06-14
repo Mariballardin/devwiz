@@ -92,7 +92,7 @@ main {
 
 .text-with-icon > button {
   position: absolute;
-  top: 2;
+  top: 1;
   right: 1;
   transform: translateY(-50%);
   margin-left: 5px; /* Espaço entre o texto e o ícone */
@@ -102,8 +102,8 @@ main {
 }
 
 svg {
-  width: 35px !important;
-  height: 35px !important;
+  width: 30px !important;
+  height: 30px !important;
   position: absolute !important;
   top: 6px !important;
   right: 0;
@@ -113,8 +113,7 @@ svg {
 
 .clip {
   right: 0;
-  border: 2px solid red;;
-  width: 5px !important;
-  height: 5px !important;
+  width: 0.1px !important;
+  height: 0.1px !important;
   // position: relative !important;
 }
