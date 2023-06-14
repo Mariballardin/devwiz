@@ -4,6 +4,7 @@ img, svg {
 }
 
 pre {
+
   background-color:rgba(255, 255, 255, 0.567);
   border-radius: 10px;
   margin-bottom: 25px;
@@ -23,9 +24,9 @@ pre::first-line{
   font-weight: bold !important;
 }
 
-// .first {
-//   height: 100vh;
-// }
+.first {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+ }
 // .first {
 //   // width: 100%;
 //   border-radius: 10px;
@@ -53,7 +54,7 @@ pre::first-line{
   padding: 20px;
   margin: 20px auto 25px;
   width: 100%;
-
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   gap: 30px;
   background-color: rgba(255, 255, 255, 0.567);
   border-radius: 20px;
@@ -70,6 +71,7 @@ pre::first-line{
 //  }
 
 main {
+
   margin: 10px;
   display: grid !important;
   gap: 15px;
