@@ -18,7 +18,7 @@ export default class extends Controller {
     useWindowResize(this)
     setTimeout(() => {
       var html_value;
-      
+
     var language = this.langValue
     var mode = "";
 
@@ -77,6 +77,7 @@ export default class extends Controller {
       autoCloseTags: true,
       mode: mode,
     });
+    this.editor.setSize(window.screen.width/2,null);
     // all your js code
     }, 1000)
 
