@@ -8,23 +8,25 @@ img, svg {
 }
 
 .mleft {
-  margin-left: 20px;
   font-size: 18px;
   font-weight: 500;
-  color: #2F7DF5;
+  color:#2561C2;
+
 }
 
 .fa-solid {
   font-size: 25px;
-  color: #050031;
+  color: black;
 }
 
-.container-fluid{
-  background-color: rgba(255, 255, 255, 0.567);
+.row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 40px !important;
   border-radius: 10px;
-  margin: 20px auto 25px;
-  padding: 20px;
-  width: fit-content;
+  margin: 30px auto !important;
+
+  width: 90%;
 }
 
 .columns-container {
@@ -51,16 +53,19 @@ p {
   text-decoration: none;
 }
 
-.title {
-  padding: 0;
-}
 
-.list {
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: white;
-  padding: 0 30px 20px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 20px;
   margin: 10px;
-  border-radius: 12px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  border: none !important;
+
 }
 
 a {
@@ -76,7 +81,16 @@ pre::first-line {
   padding: 30px;
 }
 
+.hat {
+  color:#2F7CF5;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+  border-radius: 20px;
+}
+
 #hat {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
   padding: 20px;
   margin: 20px auto 25px;
@@ -84,4 +98,32 @@ pre::first-line {
   gap: 8px;
   background-color: rgba(255, 255, 255, 0.567);
   border-radius: 20px;
+}
+
+.butts {
+  padding: 6px;
+  border-radius: 8px;
+
+}
+
+.butt {
+  display: flex;
+  gap: 15px;
+
+}
+
+#restart{
+  border: 1px solid #2F7CF5;
+
+
+}
+
+#reviews{
+  border: 1px solid #2F7CF5;
+
+}
+
+#delete{
+  border: 1px solid red;
+
 }
