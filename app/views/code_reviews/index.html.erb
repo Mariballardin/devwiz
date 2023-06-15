@@ -7,14 +7,12 @@
   <h2>All my code reviews</h2>
 </div>
 
-
-
-<% if @prompt.code_reviews.empty? %>
-  <p class="no-challenge">Hey, <%= current_user.name.capitalize %>. You did't finish your challenge yet. </p>
-<% else %>
 <div class="container-fluid">
   <div class="title">
-    <div class="content first">
+    <% if @prompt.code_reviews.empty? %>
+  <p class="no-challenge">Hey, <%= current_user.name.capitalize %>. You did't finish your challenge yet. </p>
+  <% else %>
+  <div class="content first">
     <div id="img-title">
       <div class="img">
         <% if @prompt.programming_language == "Python" %>

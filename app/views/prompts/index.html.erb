@@ -44,31 +44,30 @@
           </div>
           <h4><%= prompt.programming_language %></h4>
         </div>
-          <p><%= prompt.job_title %></p>
-          <p><%= prompt.job_field %></p>
+          <p><%= prompt.job_title %>, in <%= prompt.job_field %></p>
 
-      <div class="hat">
-        <p>Level: <%= prompt.level %></p>
+      <div class="emojis-animals">
           <% case prompt.level %>
                   <% when 1 %>
-                    <i class="fa-solid fa-face-grin-hearts"></i>
+                    <div class="animal">🐣</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 2 %>
-                    <i class="fa-solid fa-face-smile-beam"></i>
+                    <div class="animal">🐢</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 3 %>
-                    <i class="fa-solid fa-face-rolling-eyes"></i>
+                    <div class="animal">🦊</div>
                 <% end %>
                 <% case prompt.level %>
                   <% when 4 %>
-                    <i class="fa-solid fa-face-flushed"></i>
+                  <div class="animal">🦁</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 5 %>
-                    <i class="fa-solid fa-face-dizzy"></i>
+                    <div class="animal">🦅</div>
                 <% end %>
+             <p>Level: <%= prompt.level %></p>
       </div>
 
       <div class="butt">

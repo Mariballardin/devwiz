@@ -16,7 +16,6 @@ img, svg {
 //   font-weight: bold !important;
 // }
 
-
 #hat {
   display: flex;
   padding: 20px;
@@ -29,7 +28,7 @@ img, svg {
 }
 
 #botaoo {
-  margin-left: 120px;
+  margin-left: 5px;
   padding: 6px 55px;
   border-radius: 80px;
 }
@@ -40,9 +39,8 @@ img, svg {
   margin: 20px auto 25px;
   width: 100%;
   gap: 30px;
-  background-color: rgba(255, 255, 255, 0.567);
+  // background-color: rgba(255, 255, 255, 0.567);
   border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .columns-container {
@@ -91,7 +89,7 @@ p {
   padding: 25px;
   margin: 10px;
   border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 }
 a {
