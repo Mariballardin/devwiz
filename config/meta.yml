@@ -1,0 +1,5 @@
+meta_name: "DevWiz"
+meta_title: "DevWiz"
+meta_description: "AI-driven coding challenges. Personalized coding challenges to land your dream job."
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@your_twitter_account"   # required for Twitter Cards
