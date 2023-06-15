@@ -104,19 +104,23 @@ main {
 }
 
 svg {
-  width: 35px !important;
-  height: 35px !important;
+  width: 25px !important;
+  height: 30px !important;
   position: absolute !important;
-  top: 6px !important;
-  right: 0;
+  top: 10px !important;
+  right: 8px;
 
 }
 
 
 .clip {
   right: 0;
-  border: 2px solid red;;
   width: 5px !important;
   height: 5px !important;
   // position: relative !important;
+}
+
+.chall {
+  // padding-top: -60px;
+  margin-top: -40px;
 }
