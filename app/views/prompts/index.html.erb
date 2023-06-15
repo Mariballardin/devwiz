@@ -12,68 +12,71 @@
 
 
 <div class="text-center">
-
   <div class="row">
     <% @prompts.each do |prompt| %>
       <div class="col card">
-      <div class="hat">
-        <div class="img">
-          <% if prompt.programming_language == "Python" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          <% elsif prompt.programming_language == "JavaScript" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-          <% elsif prompt.programming_language == "Ruby" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
-          <% elsif prompt.programming_language == "C" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-          <% elsif prompt.programming_language == "C++" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-          <% elsif prompt.programming_language == "C#" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
-          <% elsif prompt.programming_language == "Go" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
-          <% elsif prompt.programming_language == "PHP" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
-          <% elsif prompt.programming_language == "Swift" %>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
-          <% else %>
-            <img src="hat.svg" />
-          <% end %>
+        <div class="date">
+          <%= prompt.created_at.strftime("(%d-%m-%Y)") %></p>
         </div>
+        <div class="hat">
+          <div class="img">
+            <% if prompt.programming_language == "Python" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+            <% elsif prompt.programming_language == "JavaScript" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+            <% elsif prompt.programming_language == "Ruby" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg" />
+            <% elsif prompt.programming_language == "C" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
+            <% elsif prompt.programming_language == "C++" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+            <% elsif prompt.programming_language == "C#" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" />
+            <% elsif prompt.programming_language == "Go" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" />
+            <% elsif prompt.programming_language == "PHP" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+            <% elsif prompt.programming_language == "Swift" %>
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
+            <% else %>
+              <img src="hat.svg" />
+            <% end %>
+          </div>
           <h4><%= prompt.programming_language %></h4>
-      </div>
-      <div class="hat">
-        <p class="mleft">Level: <%= prompt.level %></p>
+        </div>
+          <p><%= prompt.job_title %>, in <%= prompt.job_field %></p>
+
+      <div class="emojis-animals">
           <% case prompt.level %>
                   <% when 1 %>
-                    <i class="fa-solid fa-face-grin-hearts"></i>
+                    <div class="animal">🐣</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 2 %>
-                    <i class="fa-solid fa-face-smile-beam"></i>
+                    <div class="animal">🐢</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 3 %>
-                    <i class="fa-solid fa-face-rolling-eyes"></i>
+                    <div class="animal">🦊</div>
                 <% end %>
                 <% case prompt.level %>
                   <% when 4 %>
-                    <i class="fa-solid fa-face-flushed"></i>
+                  <div class="animal">🦁</div>
                   <% end %>
                 <% case prompt.level %>
                   <% when 5 %>
-                    <i class="fa-solid fa-face-dizzy"></i>
+                    <div class="animal">🦅</div>
                 <% end %>
-        </div>
-          <p class="mleft"><%= prompt.created_at.strftime("%d-%m-%Y") %></p>
-          <div class="butt">
-            <p class="butts" id="restart"><%= link_to 'Restart', prompt_path(prompt) %></p>
-            <p class="butts" id="reviews"><%= link_to 'Reviews', prompt_code_reviews_path(prompt) %></p>
-            <p class="butts" id="delete"><%= link_to 'Delete', prompt_path(prompt), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
-          </div>
+             <p>Level: <%= prompt.level %></p>
       </div>
-    <% end %>
 
+      <div class="butt">
+        <p class="butts" id="restart"><%= link_to 'Restart', prompt_path(prompt) %></p>
+        <p class="butts" id="reviews"><%= link_to 'Reviews', prompt_code_reviews_path(prompt) %></p>
+        <p class="butts" id="delete"><%= link_to 'Delete', prompt_path(prompt), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %></p>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
 

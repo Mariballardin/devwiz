@@ -7,10 +7,18 @@ img, svg {
   width: 30px;
 }
 
-.mleft {
-  font-size: 18px;
-  font-weight: 400;
-  color:#2561C2;
+// .mleft {
+//   font-size: 18px;
+//   font-weight: 400;
+//   color:#2561C2;
+
+// }
+
+.date {
+font-size: 10px;
+color: gray;
+font-style: italic;
+
 
 }
 
@@ -52,6 +60,7 @@ h4 {
 p {
   font-size: 14px;
   text-decoration: none;
+  color:#2F7CF5;
 }
 
 .title {
@@ -60,9 +69,10 @@ p {
 }
 
 .card {
+
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   background-color: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -70,6 +80,7 @@ p {
   margin: 10px;
   border-radius: 8px;
   border: none !important;
+
 
 }
 
@@ -94,41 +105,63 @@ pre::first-line {
   border-radius: 20px;
 }
 
+.animal {
+  font-size: 25px;
+  line-height: 1;
+  // width: 1000px;
+  // height: 50px;
+}
+.emojis-animals{
+  display: flex;
+  gap: 12px;
+
+}
+
 #hat {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   display: flex;
   padding: 20px;
   margin: 20px auto 25px;
   width: 100%;
-  gap: 8px;
+  gap: 30px;
   background-color: rgba(255, 255, 255, 0.567);
   border-radius: 20px;
 }
 
 .butts {
-  padding: 6px;
-  border-radius: 8px;
+  padding: 6px 25px;
+  border-radius: 80px;
+  max-width: 140px;
 
+}
+
+.butts > a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
 }
 
 .butt {
   display: flex;
-  gap: 15px;
+  gap: 8px;
 
 }
 
 #restart{
-  border: 1px solid #2F7CF5;
+color: white;
+background-color: #2F7CF5;
 
 
 }
 
 #reviews{
-  border: 1px solid #2F7CF5;
+
+background-color: #2F7CF5;
 
 }
 
 #delete{
-  border: 1px solid red;
+  background-color: red;
 
 }
