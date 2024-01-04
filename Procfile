@@ -1,2 +1,2 @@
-web: bin/rails server -p $PORT
+web: bundle exec rails server -p $PORT
 js: yarn build --watch
